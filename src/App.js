@@ -1,5 +1,6 @@
 import './App.css';
-import ExpenceItems from './components/ExpenceItems';
+import Card from './components/UI/card.js'
+import ExpenceItems from './components/Expenses/ExpenceItems.js';
 
 
 const expenses = [
@@ -34,33 +35,33 @@ const expenses = [
 ];
 function App() {
   return (
-    <>
-    <h2>This is me live using react</h2>
-    <ExpenceItems 
-      title = {expenses[0].title}
-      LocationOfExpenditure = {expenses[0].LocationOfExpenditure}
-      amount = {expenses[0].amount} 
-      date = {expenses[0].date}>
-    </ExpenceItems>
-    <ExpenceItems 
-      title = {expenses[1].title}
-      LocationOfExpenditure = {expenses[1].LocationOfExpenditure}
-      amount = {expenses[1].amount} 
-      date = {expenses[1].date}>
-    </ExpenceItems>
-    <ExpenceItems 
-      title = {expenses[2].title}
-      LocationOfExpenditure = {expenses[2].LocationOfExpenditure}
-      amount = {expenses[2].amount} 
-      date = {expenses[2].date}>
-    </ExpenceItems>
-    <ExpenceItems 
-      title = {expenses[3].title}
-      LocationOfExpenditure = {expenses[3].LocationOfExpenditure}
-      amount = {expenses[3].amount} 
-      date = {expenses[3].date}>
-    </ExpenceItems>
-    </>
+    <Card className="expenses">
+      <h2>This is me live using react</h2>
+      <ExpenceItems 
+        title = {expenses[0].title}
+        LocationOfExpenditure = {expenses[0].LocationOfExpenditure}
+        amount = {expenses[0].amount} 
+        date = {expenses[0].date}>
+      </ExpenceItems>
+      <ExpenceItems 
+        title = {expenses[1].title}
+        LocationOfExpenditure = {expenses[1].LocationOfExpenditure}
+        amount = {expenses[1].amount} 
+        date = {expenses[1].date}>
+      </ExpenceItems>
+      <ExpenceItems 
+        title = {expenses[2].title}
+        LocationOfExpenditure = {expenses[2].LocationOfExpenditure}
+        amount = {expenses[2].amount} 
+        date = {expenses[2].date}>
+      </ExpenceItems>
+      <ExpenceItems 
+        title = {expenses[3].title}
+        LocationOfExpenditure = {expenses[3].LocationOfExpenditure}
+        amount = {expenses[3].amount} 
+        date = {expenses[3].date}>
+      </ExpenceItems>
+    </Card>
   );
 }
 export default App;
