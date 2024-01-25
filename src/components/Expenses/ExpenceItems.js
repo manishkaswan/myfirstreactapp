@@ -1,19 +1,27 @@
+import React,{useState} from 'react';
 import Card from "../UI/card.js"
 import "./ExpenceItems.css"
 import "./ExpenceDate"
 import ExpenceDate from "./ExpenceDate"
-import ExpenseDetails from "./ExpenseDetails"
+
 function ExpenceItems (props) {
-    const Clickhandler = ()=>{
-        console.log("Delete Exp");
+    const [title,setTitle] = useState(props.title);
+    const Clickheandler = ()=>{
+        setTitle(('Updated'))
+    }
+    const [amount,setAmount] = useState(props.amount);
+    const Updatecost = ()=>{
+        setAmount("$100")
     }
     return(
         <Card className="expense-item">
             <ExpenceDate date = {props.date} />
-            <ExpenseDetails title = {props.title} amount = {props.amount} />
-                <div className="expense-item__description"></div>
-                <h2>{props.LocationOfExpenditure}</h2>
-                <button onClick={Clickhandler}>Delete</button>
+            <div className="expense-item__discription">
+                <h2>{title}</h2>
+                <div className="expense-item__price">${amount}</div>
+            </div>
+            <button onClick={Clickheandler}>Update Title</button>
+            <button onClick={Updatecost}>Update Cost</button>
         </Card>
     )
 }
