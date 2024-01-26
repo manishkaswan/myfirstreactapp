@@ -1,6 +1,7 @@
 import './App.css';
 import Card from './components/UI/card.js'
 import ExpenceItems from './components/Expenses/ExpenceItems.js';
+import ExpenseForm from './components/Form/ExpenseForm.js';
 
 
 const expenses = [
@@ -31,6 +32,8 @@ const expenses = [
 ];
 function App() {
   return (
+    <>
+    <ExpenseForm />
     <Card className="expenses">
       <h2>This is me live using react</h2>
       <ExpenceItems 
@@ -54,6 +57,7 @@ function App() {
         date = {expenses[3].date}>
       </ExpenceItems>
     </Card>
+    </>
   );
 }
 export default App;
